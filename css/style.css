@@ -2,7 +2,11 @@
   padding: 0;
   margin: 0;
   font-size: 0.9rem;
-  font-color: #000000;
+  color: #000000;
+}
+
+nav {
+  position: fixed;
 }
 
 #navbarNav ul li a:first-child {
@@ -19,7 +23,7 @@ ul {
 }
 
 .border-bottom {
-  border-bottom: 3px;
+  border-bottom: 3px thick #000000;
   border-left: 0;
   border-right: 0;
   border-top: 0;
