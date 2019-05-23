@@ -101,7 +101,7 @@ function removeShopItem (e) {
 
     if(e.target.classList.contains('remove') ) {
         e.target.parentElement.parentElement.remove();
-        shopItem = e.target.parentElement.parentElement
+        shopItem = e.target.parentElement.parentElement;
         shopItemId = shopItem.querySelector('a').getAttribute('data-id');
     }
     //remove from local storage
@@ -112,12 +112,12 @@ function removeShopItem (e) {
 function removeShopItemLocalStorage(id) {
 
     //get the shop items from local storage
-    let shopItemsLS = getShopItemFromStorage();
+    let shopItemsLS = getShopItemsFromStorage();
 
     //loop through the array and find the index to remove
-    shopItemsLS.forEach(function(shopItemsLS, index) {
-        if (courseLS.id === id) {
-            coursesLS.splice(index, 1);
+    shopItemsLS.forEach(function(shopItemLS, index) {
+        if (shopItemLS.id === id) {
+            shopItemsLS.splice(index, 1);
         }
     });
     //add the rest of the array
